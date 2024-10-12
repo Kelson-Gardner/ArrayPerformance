@@ -87,7 +87,7 @@ void evaluateRawArray(const SourceArray& random, const SourceArray& sorted, cons
     std::chrono::milliseconds totalRotatedSortTimeSequential = measureSortTimeRawArraySeq(rotated);
     std::chrono::milliseconds totalRotatedSortTimeParallel = measureSortTimeRawArrayPar(rotated);
 
-    std::cout << "--- Raw Array Performance ---   \n\n";
+    std::cout << "\n--- Raw Array Performance ---   \n\n";
 
     std::cout << "Sequential\n";
     std::cout << "      Random: " << totalRandomSortTimeSequential.count() << std::endl;
