@@ -29,19 +29,16 @@ int main(int argc, const char * argv[]) {
         organPipeStdArrayVal[i] = i;
         reversedStdArray[i] = i;
         rotatedStdArray[i] = i;
-        // if(i < HOW_MANY_ELEMENTS - 1)
-        // {
-        //     rotatedStdArray[i] = i + 1;
-        // }
-        // else
-        // {
-        //     rotatedStdArray[i] = 0;
-        // }
     }
     std::reverse(reversedStdArray.begin(), reversedStdArray.end());
     std::rotate(rotatedStdArray.begin(), rotatedStdArray.begin() + 1, rotatedStdArray.end());
     organPipeStdArray(organPipeStdArrayVal);
 
     evaluateStdArray(randomStdArray, sortedStdArray, reversedStdArray, organPipeStdArrayVal, rotatedStdArray);
+    
+    evaluateRawArray(randomStdArray, sortedStdArray, reversedStdArray, organPipeStdArrayVal, rotatedStdArray);
+
+    evaluateStdVector(randomStdArray, sortedStdArray, reversedStdArray, organPipeStdArrayVal, rotatedStdArray);
+
     return 0;
 }
